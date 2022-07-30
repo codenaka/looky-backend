@@ -11,7 +11,7 @@ const recipeSchema = new mongoose.Schema({
     required: [true, "Veuillez indiquer la preparation de la recette"],
   },
   ingredients: Array,
-  imageUrl: {
+  image: {
     type: String,
     //required: [true, "Veuillez fournir une image pour la recette"],
   },

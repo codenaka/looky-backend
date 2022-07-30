@@ -1,3 +1,4 @@
+const path = require("path");
 const express = require("express");
 const morgan = require("morgan");
 const cors = require("cors");
@@ -12,6 +13,9 @@ const app = express();
 
 // cors
 app.use(cors());
+
+// Serving static files
+app.use(express.static(path.join(__dirname, "../uploads")));
 
 // set security HTTP headers
 app.use(helmet());
